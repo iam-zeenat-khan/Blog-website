@@ -1,0 +1,131 @@
+.service{
+    background: linear-gradient(to bottom left, #ccccff 0%, #ffffff 72%);
+
+}
+
+h1 {
+    text-align: center;
+    padding:2rem 0;
+    padding-bottom: 3 rem;
+    font-size: 1.8rem;
+    color:rgb(128, 119, 209);
+    
+}
+.service-box{
+    padding:3em;
+    display:grid;
+    grid-gap:2em;
+}
+.service .service-box{
+    display: grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    grid-gap:2em;
+}
+.service-box .box{
+    height: 200px;
+    width: 200px;
+    padding: 10px;
+    background-color:#fff;
+    overflow: hidden;
+    transition: 0.3s ease;
+    margin: 15px;
+    font-family: sans-serif;
+    box-shadow: 5px 5px 5px grey;
+
+}
+.service-box .box img{
+    height: 40%;
+}
+.service-box h4{
+    color: rgb(147, 102, 189);
+    margin-top: 20px;
+    margin-bottom: 15px;
+    transition: inherit;
+    transition-delay: 0.5s;
+    font-weight: 800;
+    font-size: 1.3rem;
+}
+.service-box .Read{
+    overflow: hidden;
+    display: inline-block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: relative;
+    padding-right: 2rem;
+}
+.Read:before{
+    background-repeat:black;
+    bottom:0;
+    height:.125rem;
+    margin:auto;
+    left:0;
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transform:scaleX(.2);
+    transform-origin: left center;
+    Z-index:0;
+    animation: link-out;
+    animation-fill-mode: forwards;
+    animation-duration: 0.4s;
+    animation-timing-function: cubic-bezier(.6,.01,0,1) ;
+}
+ .service-box .box .Read span{
+    position:relative;
+    transform: translateX(-200%);
+    display: inline-block;
+    transition: 0.6s cubic-bezier(.6,.01,0,1);
+}
+.box:hover .Read span{
+    transform: translateX(0%);
+}
+.box:hover .Read::before{
+    animation:link-in;
+    animation-fill-mode:forwards;
+    animation-duration:0.4s;
+    animation-timing-function: cubic-bezier(.6,.01 0,1);
+
+}
+.box:hover img,
+.box:hover h4{
+    transform:translateY(-0.625rem) ;
+}
+
+
+
+
+
+
+
+
+/*
+
+
+
+
+
+
+
+.service{
+    display:Flex ;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: white;
+}
+/*.service h1{
+    padding:2rem 0;
+    padding-bottom: 3 rem;
+    font-size: 3.5rem;
+    color:rgb(38, 113, 199);
+}
+.service{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+
+}
